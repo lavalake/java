@@ -1,2 +1,3 @@
 http://www.digilife.be/quickreferences/PT/Java%20Collections%20Framework.pdf
 http://www.logicbig.com/tutorials/core-java-tutorial/java-collections/java-collection-cheatsheet/
+collections.enumeration() Enumeration<String>
