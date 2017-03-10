@@ -2,3 +2,5 @@ RuntimeException
 comparable
 iterable
 comparator
+enumeration
+can not override static method
