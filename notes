@@ -4,3 +4,4 @@ iterable
 comparator
 enumeration
 can not override static method
+array.clone
