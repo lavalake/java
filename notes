@@ -4,4 +4,5 @@ iterable
 comparator
 enumeration
 can not override static method
-array.clone
+array.clone vs Arrays.copyOf()
+  clone is shallow copy and copyOf is deep copy
