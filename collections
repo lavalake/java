@@ -2,3 +2,5 @@ http://www.digilife.be/quickreferences/PT/Java%20Collections%20Framework.pdf
 http://www.logicbig.com/tutorials/core-java-tutorial/java-collections/java-collection-cheatsheet/
 collections.enumeration() Enumeration<String>
 Collections.unmodifiableSet() vs Clone
+Java: Collections.emptyList vs new ArrayList
+http://programming.guide/java/emptylist-vs-new-collection.html
