@@ -1,0 +1,2 @@
+https://dzone.com/articles/static-members-inner-classes-t
+Inner classes may not declare static members, unless they are compile-time constant fields
