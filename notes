@@ -7,3 +7,6 @@ can not override static method
 array.clone vs Arrays.copyOf()
   clone is shallow copy and copyOf is deep copy
 inner class
+reflection
+jvm
+string monipulation
