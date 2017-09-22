@@ -2,3 +2,5 @@ https://dzone.com/articles/static-members-inner-classes-t
 Inner classes may not declare static members, unless they are compile-time constant fields
 
 http://javaranch.com/campfire/StoryInner.jsp
+nested inner class
+  static inner interface: Map.Entry
