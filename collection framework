@@ -1,3 +1,17 @@
 The Collections Framework
 https://docs.oracle.com/javase/7/docs/technotes/guides/collections/index.html
 http://softeng.polito.it/slides/07-JavaCollections.pdf
+Map
+  why entrySet()?
+  why static interface Map.Entry
+Stack:
+  why Stack is not an interface?
+ 
+Implementation:
+1. HashSet
+  This class implements the Set interface, backed by a hash table (actually a HashMap instance)?
+2. TreeSet
+  A NavigableSet implementation based on a TreeMap
+3. LinkedHashSet
+  Hash table and linked list implementation of the Set interface, with predictable iteration order. This implementation differs from HashSet in that it maintains a doubly-linked list running through all of its entries. This linked list defines the iteration ordering, 
+  which is the order in which elements were inserted into the set (insertion-order).
