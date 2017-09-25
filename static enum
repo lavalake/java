@@ -1,5 +1,7 @@
 1. static initializer
 The code in a static initializer block is executed by the virtual machine when the class is loaded.
+Because it is executed automatically when the class is loaded, parameters don't make any sense, so a 
+static initializer block doesn't have an argument list.
 
 public class SystemService {
 
