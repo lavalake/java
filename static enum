@@ -1,3 +1,6 @@
+1. static initializer
+The code in a static initializer block is executed by the virtual machine when the class is loaded.
+
 public class SystemService {
 
     private static HashMap<String, State> sStates = Maps.newHashMap();
