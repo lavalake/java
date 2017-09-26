@@ -4,3 +4,21 @@ Inner classes may not declare static members, unless they are compile-time const
 http://javaranch.com/campfire/StoryInner.jsp
 nested inner class
   static inner interface: Map.Entry
+  
+Anonymous class
+
+
+3. Best practice is always to do whatever makes the code easiest to understand and maintain.
+https://www.quora.com/What-are-good-Java-design-practices-about-static-inner-classes
+************static inner class can access outer class private constructor***************** used for builder and factory
+Inner classes are most often there to provide an implementation of an abstract class or an interface, which the main class doesn’t extend/implement.
+You sometimes see builder or factory classes that are a static inner class, making use of the fact that a static inner class can call private constructors of the parent.
+The main danger with inner classes is that they have access to the parent’s private fields, which can lead to unexpected side-effects. There are those who assert that all access to private fields should be through accessor methods - I wouldn’t go that far, but the fact remains that (non-static) inner classes can manipulate private state and that’s dangerous. So I think non-static inner classes should always be private or anonymous, to avoid other classes elsewhere using them to alter an object in non-obvious ways. However, this leads to another disadvantage which is that the inner class can’t then be tested directly.
+
+So, if an inner class does need to be public, it should be static. Static inner classes don’t have access to the instance variables of the parent, so they’re safer. Static inner classes can be useful to expose functionality of the class in controlled ways, such as by providing an Iterator or Comparator implementation. Inner classes are most often there to provide an implementation of an abstract class or an interface, which the main class doesn’t extend/implement.
+
+It’s also acceptable to make a small helper class a static inner class, if it is closely related to the parent and only used in conjunction with it. You sometimes see builder or factory classes that are a static inner class, making use of the fact that a static inner class can call private constructors of the parent.
+
+Inner classes should be very lightweight. If they have more than 3 methods, I’d suggest best practice is to make them a top level class. If they have less than 3 methods, and don’t collaborate with any other classes besides the parent class, there’s a case for making them public static inner classes, to improve understandability of both the parent and the package it’s in.
+
+My personal preference is that I almost never make static inner classes; I would rather make new packages, that each just have a few classes in, as the way of organising and showing relationships between classes. However, if working in a team which prefers fewer packages with more classes in them, I think there’s more of a case for adding new classes as static inner classes rather than further cluttering up a package space.
