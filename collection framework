@@ -15,3 +15,6 @@ Implementation:
 3. LinkedHashSet
   Hash table and linked list implementation of the Set interface, with predictable iteration order. This implementation differs from HashSet in that it maintains a doubly-linked list running through all of its entries. This linked list defines the iteration ordering, 
   which is the order in which elements were inserted into the set (insertion-order).
+4. Java Collections - Iterable
+    http://tutorials.jenkov.com/java-collections/iterable.html
+    http://tutorials.jenkov.com/java-generics/implementing-iterable.html
