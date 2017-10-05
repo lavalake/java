@@ -22,3 +22,6 @@ Implementation:
     https://stackoverflow.com/questions/19474862/is-it-bad-practice-to-return-an-iterable-in-a-method
 5.  Howtodoinjava collections
     https://howtodoinjava.com/category/core-java/collections/
+6. implementing interable interface
+  http://www.cs.cornell.edu/courses/cs211/2005fa/Lectures/L15-Iterators%20&%20Inner%20Classes/L15cs211fa05.pdf
+    Inner classes are the best way to write an Iterator
