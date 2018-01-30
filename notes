@@ -1,6 +1,8 @@
 RuntimeException
 comparable
 iterable
+iterator
+  every Collection class has an inner private iterator class
 comparator
 enumeration
 can not override static method
