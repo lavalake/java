@@ -1,0 +1,6 @@
+containsKey
+containsValue
+put
+get
+entrySet
+keySet
