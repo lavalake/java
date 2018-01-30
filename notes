@@ -1,15 +1,18 @@
-RuntimeException
+1.RuntimeException
   can not capture? UnsupportedOperationException
-comparable
-iterable
-iterator
-  every Collection class has an inner private iterator class
-comparator
-enumeration
-can not override static method
-array.clone vs Arrays.copyOf()
+2.comparable
+3.iterable
+  iterator
+    every Collection class has an inner private iterator class
+4.comparator
+5.enumeration
+6.can not override static method
+7.array.clone vs Arrays.copyOf()
   clone is shallow copy and copyOf is deep copy
-inner class
-reflection
-jvm
-string monipulation
+8.inner class
+  private or static public
+9.reflection
+10.jvm
+11.string monipulation
+12.Collection Interface
+    List\Set sub interface
