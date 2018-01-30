@@ -1,0 +1,10 @@
+1. Set only work with primitives
+2. char is not primitive and Character is
+3. convert String to Set
+3. String.toCharArray() to convert string to char array
+4. Convert String to Set
+  toCharArray() return char[] not Character[], so can not init Set with it. Need manully add every char to Set
+  Set<Character> mSet = new HashSet<>();
+  for (char c : S.toCharArray(){
+    mSet.add(c);
+  }
