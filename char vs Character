@@ -1,0 +1,5 @@
+1. char is primitive and Character is Object
+2.The Java compiler will also create a Character object for you under some circumstances. For example, 
+if you pass a primitive char into a method that expects an object, the compiler automatically converts
+the char to a Character for you. This feature is called autoboxing or unboxing, if the conversion goes
+the other way
