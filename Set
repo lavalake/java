@@ -1,4 +1,4 @@
-1. Set only work with primitives
+1. Set only work with object not primitives
 2. char is not primitive and Character is
 3. convert String to Set
 3. String.toCharArray() to convert string to char array
@@ -8,3 +8,6 @@
   for (Character c : S.toCharArray(){
     mSet.add(c);
   }
+5. initialization with primitives
+  Set can not init with primitives. Arrays.asList will convert primitvie to object and create a list.
+    new HashSet<>(Arrays.asList(1,2,3,));
