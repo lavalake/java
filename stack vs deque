@@ -1,0 +1,11 @@
+Deques can also be used as LIFO (Last-In-First-Out) stacks. This interface should be used in preference to the legacy
+Stack class. When a deque is used as a stack, elements are pushed and popped from the beginning of the deque. 
+Stack methods are precisely equivalent to Deque methods as indicated in the table below:
+
+Stack Method	Equivalent Deque Method
+push(e)	addFirst(e)
+pop()	removeFirst()
+peek()	peekFirst()
+Note that the peek method works equally well when a deque is used as a queue or a stack; in either case, 
+elements are drawn from the beginning of the deque.
+Unlike the List interface, this interface does not provide support for indexed access to elements.
