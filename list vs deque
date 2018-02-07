@@ -1,0 +1,3 @@
+list only have add method. do not have addFirst or addLast.
+List.add() will add to end of the list. if want to add to arbitary position, use add(index,e).
+So add(0,e) == Deque.addFirst()
