@@ -1,0 +1,8 @@
+PriorityQueue<Map.Entry<String,Integer>> priQ = new PriorityQueue<>(words.length,new Comparator<Map.Entry<String,Integer>>(){
+            
+            public int compare (Map.Entry<String,Integer> a, Map.Entry<String,Integer> b) {
+                return a.getValue()==b.getValue()?b.getKey().compareTo(a.getKey()):a.getValue()-b.getValue();
+            }
+        });
+        
+  The head of this queue is the least element with respect to the specified ordering
