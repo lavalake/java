@@ -25,3 +25,5 @@ Implementation:
 6. implementing interable interface
   http://www.cs.cornell.edu/courses/cs211/2005fa/Lectures/L15-Iterators%20&%20Inner%20Classes/L15cs211fa05.pdf
     Inner classes are the best way to write an Iterator
+7. List.add()
+  when you add a list to list, you must create a new list. Add only add the reference.
