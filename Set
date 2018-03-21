@@ -11,3 +11,7 @@
 5. initialization with primitives
   Set can not init with primitives. Arrays.asList will convert primitvie to object and create a list.
     new HashSet<>(Arrays.asList(1,2,3,));
+6. treeSet
+  public class TreeSet<E>
+extends AbstractSet<E>
+implements NavigableSet<E>, Cloneable, Serializable
