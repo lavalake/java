@@ -4,3 +4,7 @@ An entry in a <tt>WeakHashMap</tt> will automatically be removed when
  * A synchronized <tt>WeakHashMap</tt> may be constructed using the
  * {@link Collections#synchronizedMap Collections.synchronizedMap}
  * method.
+ Each key object in a <tt>WeakHashMap</tt> is stored indirectly as
+ * the referent of a weak reference.  Therefore a key will automatically be
+ * removed only after the weak references to it, both inside and outside of the
+ * map, have been cleared by the garbage collector.
