@@ -1,0 +1,5 @@
+SparseArrays map integers to Objects.  Unlike a normal array of Objects,
+26 * there can be gaps in the indices.  It is intended to be more memory efficient
+27 * than using a HashMap to map Integers to Objects, both because it avoids
+28 * auto-boxing keys and its data structure doesn't rely on an extra entry object
+29 * for each mapping.
