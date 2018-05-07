@@ -1,0 +1,6 @@
+An entry in a <tt>WeakHashMap</tt> will automatically be removed when
+ * its key is no longer in ordinary use.
+ Like most collection classes, this class is not synchronized.
+ * A synchronized <tt>WeakHashMap</tt> may be constructed using the
+ * {@link Collections#synchronizedMap Collections.synchronizedMap}
+ * method.
