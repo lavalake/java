@@ -1,6 +1,11 @@
 http://mechanitis.blogspot.com/
+http://lmax-exchange.github.io/disruptor/files/Disruptor-1.0.pdf
 unbounded queue
 cost of locks
 cach friendly
 memory barriar
 memory allocation/garbage collection
+Why linked list backed solution is not good?
+  a. garbage collection will be minized if memory is pre-allocated
+  b. friendly to cach stragtegies if allocation is performed in a uniform chunk.
+So array data structure is a better.
