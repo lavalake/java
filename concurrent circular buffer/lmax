@@ -9,3 +9,5 @@ Why linked list backed solution is not good?
   a. garbage collection will be minized if memory is pre-allocated
   b. friendly to cach stragtegies if allocation is performed in a uniform chunk.
 So array data structure is a better.
+
+There is a high cost to calculate the remainder of sequence number. Making ring buffer size to power of 2 will reduce the cost.
