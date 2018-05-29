@@ -11,3 +11,7 @@ Why linked list backed solution is not good?
 So array data structure is a better.
 
 There is a high cost to calculate the remainder of sequence number. Making ring buffer size to power of 2 will reduce the cost.
+False Sharing
+  if two variables sit beside each other, head and tail, they are in the same cache line. These two variable is updated by two
+  different threads. The every time one thread update head, the cache line of the other thread will invalidated if they run on
+  different CPU.
