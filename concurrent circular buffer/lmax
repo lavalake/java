@@ -4,6 +4,9 @@ unbounded queue
 cost of locks
 cach friendly
 memory barriar
+  1. guarantee instruction order. Panelty, compiler and cpu can not optimize instruction order
+  2. data consistency. Data before the barriar are guaranteed to be visible to other cpu. Pantlty, this will flush the cache.
+  
 memory allocation/garbage collection
 Why linked list backed solution is not good?
   a. garbage collection will be minized if memory is pre-allocated
