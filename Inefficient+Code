@@ -1,0 +1,8 @@
+https://help.semmle.com/wiki/display/JAVA/Inefficient+Code
+Inefficient empty string test
+Inefficient output stream
+Inefficient primitive constructor
+Inefficient String constructor
+Inefficient use of key set iterator
+Inner class could be static
+String concatenation in loop
