@@ -1,0 +1,9 @@
+http://www.programmr.com/blogs/what-every-java-developer-should-know-strong-and-weak-references
+objects in Java are created on the heap
+As stated by Java documentation, weak references are most often used to implement canonicalizing mappings. A mapping is called 
+canonicalized if it holds only one instance of a particular value. Rather than creating a new object, it looks up the existing 
+one in the mapping and uses it.
+Of course, the most known use of these references is the WeakHashMap class. It’s the implementation of the Map interface where 
+every key is stored as a weak reference to the given key. When the Garbage Collector removes a key, the entity associated with 
+this key is deleted as well.
+Another area where they can be used is the Lapsed Listener problem.
