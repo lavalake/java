@@ -1,0 +1,32 @@
+https://droidyue.com/blog/2014/10/12/understanding-weakreference-in-java/
+但是我们如果想追踪Widget对象的额外信息，我们该怎么办？ 假设我们需要记录每个对象的序列号，但是由于Widget类并不包含这个属性，而且也不能扩展导致我们也
+不能增加这个属性。其实一点问题也没有，HashMap完全可以解决上述的问题。
+
+1
+serialNumberMap.put(widget, widgetSerialNumber);
+这表面看上去没有问题，但是widget对象的强引用很有可能会引发问题。我们可以确信当一个widget序列号不需要时，我们应该将这个条目从map中移除。
+如果我们没有移除的话，可能会导致内存泄露，
+
+另一个强引用可能带来的问题就是缓存,尤其是像图片这样的大文件的缓存。假设你有一个程序需要处理用户提供的图片，通常的做法就是做图片数据缓存，
+因为从磁盘加载图片代价很大，并且同时我们也想避免在内存中同时存在两份一样的图片数据
+
+弱引用(Weak Reference)
+
+弱引用简单来说就是将对象留在内存的能力不是那么强的引用。使用WeakReference，垃圾回收器会帮你来决定引用的对象何时回收并且将对象从内存移除。
+创建弱引用如下
+
+1
+WeakReference<Widget> weakWidget = new WeakReference<Widget>(widget);
+使用weakWidget.get()就可以得到真实的Widget对象，因为弱引用不能阻挡垃圾回收器对其回收，你会发现（当没有任何强引用到widget对象时）使用get时突然
+返回null。
+
+解决上述的widget序列数记录的问题，最简单的办法就是使用Java内置的WeakHashMap类。WeakHashMap和HashMap几乎一样，唯一的区别就是它的键（不是值!!!）
+使用WeakReference引用。当WeakHashMap的键标记为垃圾的时候，这个键对应的条目就会自动被移除。这就避免了上面不需要的Widget对象手动删除的问题。
+使用WeakHashMap可以很便捷地转为HashMap或者Map。
+
+引用队列(Reference Queue)
+Java中实际上有四种强度不同的引用，从强到弱它们分别是，强引用，软引用，弱引用和虚引用
+软引用（Soft Reference）
+
+软引用基本上和弱引用差不多，只是相比弱引用，它阻止垃圾回收期回收其指向的对象的能力强一些。如果一个对象是弱引用可到达，那么这个对象会被垃圾回收器接下来的
+回收周期销毁。但是如果是软引用可以到达，那么这个对象会停留在内存更时间上长一些。当内存不足时垃圾回收器才会回收这些软引用可到达的对象
