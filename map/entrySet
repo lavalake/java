@@ -1,0 +1,24 @@
+How to iterate entrySet?
+use Iterator
+how to remove item while iterate?
+use Iterator.remove()
+how to update the entry?
+use entry.setValue()
+
+while (!taskMap.isEmpty()) {
+            Iterator<Map.Entry<Character,Integer>> itr = taskMap.entrySet().iterator();
+            int idle = 0;
+            int temp = n;
+            if ( n >= taskMap.size())
+                idle += n - taskMap.size() + 1;
+            while (itr.hasNext() && temp > 0) {
+                intervals++;
+                temp--;
+                Map.Entry<Character,Integer> item =  itr.next();
+                if (item.getValue() == 1) {
+                    itr.remove();
+                } else {
+                    item.setValue(item.getValue()-1);
+                }
+            }
+            
