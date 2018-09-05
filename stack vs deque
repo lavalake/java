@@ -9,3 +9,8 @@ peek()	peekFirst()
 Note that the peek method works equally well when a deque is used as a queue or a stack; in either case, 
 elements are drawn from the beginning of the deque.
 Unlike the List interface, this interface does not provide support for indexed access to elements.
+
+https://www.geeksforgeeks.org/deque-interface-java-example/
+The java.util.Deque interface is a subtype of the java.util.Queue interface. The Deque is related to the double-ended queue 
+that supports addition or removal of elements from either end of the data structure, it can be used as a queue 
+(first-in-first-out/FIFO) or as a stack (last-in-first-out/LIFO). These are faster than Stack and LinkedList
