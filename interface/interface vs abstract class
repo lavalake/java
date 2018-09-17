@@ -1,0 +1,4 @@
+As Java 8 allows for default implementation of methods in interface called Default Methods, there seems to be a confusion between when would I use a abstract class.
+
+So when should interface with default methods be used and when should an abstract class be used? Are the abstract classes still useful in that scenario?
+https://stackoverflow.com/questions/19998454/interface-with-default-methods-vs-abstract-class-in-java-8
