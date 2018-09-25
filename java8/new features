@@ -2,3 +2,6 @@ https://www.baeldung.com/java-8-new-features
 lamda
 funtional interface
 stream
+interface default method
+  for extending the interface without breaking the old implementation
+interface static method
