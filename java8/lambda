@@ -1,2 +1,7 @@
 https://www.cnblogs.com/snowInPluto/p/5981400.html
 http://www.cnblogs.com/CarpenterLee/p/5978721.html
+
+https://github.com/lavalake/JavaLambdaInternals/blob/master/2-Lambda%20and%20Anonymous%20Classes(II).md
+ambda表达式通过invokedynamic指令实现，书写Lambda表达式不会产生新的类.
+反编译之后我们发现Lambda表达式被封装成了主类的一个私有方法
+既然Lambda表达式不是内部类的简写，那么Lambda内部的this引用也就跟内部类对象没什么关系了。在Lambda表达式中this的意义跟在表达式外部完全一样
