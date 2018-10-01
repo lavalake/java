@@ -3,3 +3,28 @@ SparseArrays map integers to Objects.  Unlike a normal array of Objects,
 27 * than using a HashMap to map Integers to Objects, both because it avoids
 28 * auto-boxing keys and its data structure doesn't rely on an extra entry object
 29 * for each mapping.
+
+https://blog.csdn.net/wzy_1988/article/details/51559012
+
+通过源码,我们来总结一下put函数的步骤:
+
+
+通过二分查找算法,计算key的索引值.
+如果索引值大于0,说明有key对应的value存在,直接替换value即可.
+如果索引值小于0,对索引值取反,获取key应该插入的坐标i.
+判断是否需要扩容:1.需要扩容,则先扩容; 2.不需要扩容,则利用System.arraycopy移动相应的元素,进行(key,value)键值对插入.
+
+---------------------
+
+本文来自 低调小一 的CSDN 博客 ，全文地址请点击：https://blog.csdn.net/wzy_1988/article/details/51559012?utm_source=copy 
+
+SparseArray vs HashMap:
+
+
+首先,这是两种完全不同的数据结构.SparseArray是两个数组:int[]和Object[], HashMap是数组+链表. Key of SparseArray is primitive. No need to boxing and
+unboxing.
+查找效率上: 首先,SparseArray不需要对key进行hash运算,并且通过二分查找保证查询效率为O(lgn).而HashMap在未冲突的情况下是O(1),冲突的情况下是O(n).
+
+---------------------
+
+本文来自 低调小一 的CSDN 博客 ，全文地址请点击：https://blog.csdn.net/wzy_1988/article/details/51559012?utm_source=copy 
