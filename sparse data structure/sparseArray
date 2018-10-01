@@ -1,0 +1,7 @@
+sparsearray
+SparseArray is intended to be more memory-efficient than a HashMap, because it avoids auto-boxing keys and its data structure
+doesn't rely on an extra entry object for each mapping
+Note that this container keeps its mappings in an array data structure, using a binary search to find keys. The implementation
+is not intended to be appropriate for data structures that may contain large numbers of items. It is generally slower than a 
+HashMap because lookups require a binary search, and adds and removes require inserting and deleting entries in the array. 
+For containers holding up to hundreds of items, the performance difference is less than 50%
