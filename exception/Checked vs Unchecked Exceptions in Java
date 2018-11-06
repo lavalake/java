@@ -1,1 +1,17 @@
 https://www.geeksforgeeks.org/checked-vs-unchecked-exceptions-in-java/
+https://stackoverflow.com/questions/11589302/why-is-throws-exception-necessary-when-calling-a-function
+
+In Java, you can throw anything that extends the Throwable class. However, you don't need to specify a throws clause for all 
+classes. Specifically, classes that are either an Error or RuntimeException or any of the subclasses of these two. 
+In your case Exception is not a subclass of an Error or RuntimeException. So, it is a checked exception and must be 
+specified in the throws clause, if you don't handle that particular exception. That is why you needed the throws clause
+
+Now, as you know exceptions are classified into two: checked and unchecked. Why these classification?
+  Checked Exception: They are used to represent problems that can be recovered during the execution of the program.
+  
+  Unchecked Exceptions: They again can be divided into two: Errors and RuntimeExceptions. One reason for them to be unchecked is
+  that they are numerous in number, and required to handle all of them will clutter our programm and reduce its clarity
+   1. Runtime Exceptions: They usually happen due to programmers fault. For example, if an ArithmeticException of division by 
+    zero occurs or an ArrayIndexOutOfBoundsException occurs, it is because we are not careful enough in our coding. 
+    They happen usually because some errors in our program logic. So, they must be cleared before our program enters into production mode.
+   2. Errors: Errors are situations from which usually the program cannot recover. For example, if a StackOverflowError 
