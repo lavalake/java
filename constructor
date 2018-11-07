@@ -1,0 +1,2 @@
+1. protected can be called by subclass or class in same package
+2. lazy initilization
