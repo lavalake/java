@@ -1,0 +1,6 @@
+1. //!!!!!!!use equals, not "==" to compare string
+2. substring
+3. compareTo
+StringBuilder
+1. deleteCharAt()
+2. delete(start, end)
