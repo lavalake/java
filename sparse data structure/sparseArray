@@ -5,3 +5,6 @@ Note that this container keeps its mappings in an array data structure, using a 
 is not intended to be appropriate for data structures that may contain large numbers of items. It is generally slower than a 
 HashMap because lookups require a binary search, and adds and removes require inserting and deleting entries in the array. 
 For containers holding up to hundreds of items, the performance difference is less than 50%
+1. not thread safe
+2. when delete, will not delete the key directly. mark the mValue[mKeys[index]]=DELETED. when we insert, if the new key is inserted at same index, we just replace the value.
+3. if the new key index large than the mKeys array length, then call the gc() which will remove all the empty keys and compact the mKeys array. then try to find key again to get new index.
